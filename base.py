@@ -4,6 +4,7 @@ from html.parser import HTMLParser
 
 
 StDate = '20181004' #Start Date of NHL
+#not working atm
 #ToDate = current_time.strftime('%Y%m%d')
 TestDate = '20190101'
 
@@ -13,6 +14,20 @@ TestDate = '20190101'
 url = 'http://www.espn.com/nhl/scoreboard?date='+TestDate
 soup = BeautifulSoup(urlopen(url), "html.parser")
 
-winners = soup.find_all("tr",{"class":"winner"})
+gameids = []
+teams=[]
+for gameid in soup.find_all("div",{"class":"final"}):
+    gameids.append(gameid.get('id'))
+    for gameid in gameids:
+        winner = soup.find("tr",{"class":"winner"})
+        loser = soup.find("tr",{"class":"loser"})
+        for team in winner:
+            teams.append(winner.find("div",{"class":"logo-small"}).a.text)
+        for team in loser:
+            teams.append(loser.find("div",{"class":"logo-small"}).a.text)
 
-#print(len(winners))
+
+
+
+print(gameids)
+print(teams)
