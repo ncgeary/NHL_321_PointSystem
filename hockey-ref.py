@@ -3,9 +3,6 @@ from urllib.request import urlopen
 from html.parser import HTMLParser
 
 
-#Just starting with Jan 1 date to test out grathering data
-#Using ESPN scoring because of how their HTML is set up
-#Easier to find winners/losers
 url = 'https://www.hockey-reference.com/leagues/NHL_2019_standings.html'
 soup = BeautifulSoup(urlopen(url), "html.parser")
 
