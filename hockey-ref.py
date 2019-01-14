@@ -1,4 +1,5 @@
 from bs4 import BeautifulSoup
+import numpy as np
 from urllib.request import urlopen
 from html.parser import HTMLParser
 
@@ -6,21 +7,22 @@ from html.parser import HTMLParser
 url = 'https://www.hockey-reference.com/leagues/NHL_2019_standings.html'
 soup = BeautifulSoup(urlopen(url), "html.parser")
 
-table = soup.find("table",{"id":"standings"})
+for caption in soup.find_all('caption'):
+    if caption.get_text() == 'Expanded Standings Table':
+        table = caption.find_parent('table', {"id":"standings"})
 
-name=[]
-overall=[]
-shootout=[]
-overtime=[]
 
-for data in table:
-    for rows in table.find_all("tr"):
-        name.append(table.find("td",{"data-stat":"team_name"}).a.text)
-        overall.append(table.find("td",{"data-stat":"Overall"}).text)
-        shootout.append(table.find("td",{"data-stat":"Shootout"}).text)
-        overtime.append(table.find("td",{"data-stat":"ot"}).text)
+all_teams = []
+with open('NHL_Standings.txt','w') as r:
+    for row in table.find_all('tr'):
+        for cell in row.find_all('td'):
+            all_teams.append(cell.text)
+            # just to throw it into a text file
+            r.write(cell.text.ljust(5))
+        r.write('\n')
 
-print(name)
-print(overall)
-print(shootout)
-print(overtime)
+
+
+np.split(all_teams, 31)
+
+print(all_teams)
