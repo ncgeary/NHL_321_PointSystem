@@ -43,16 +43,14 @@ teamtable = pd.DataFrame(all_teams)
 #clean data & rename headers
 teamtable = teamtable.drop([4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],axis=1)
 teamtable = teamtable.rename(columns={0:"Team",1:"Overall",2:"Shootout",3:"Overtime"})
-#wanted to use a test for all the math
-testteam = teamtable
 
-teamname = testteam.drop(["Overall","Shootout","Overtime"],axis=1)
+# Striping out the strings of the records
 
-Overall_math = testteam.Overall.str.split("-",expand=True).drop([1],axis=1).rename(columns={0:"Wins",2:"OT_L"}).astype(int)
+teamname = teamtable.drop(["Overall","Shootout","Overtime"],axis=1)
+Overall_math = teamtable.Overall.str.split("-",expand=True).rename(columns={0:"Wins",1:"Loss",2:"OT_L"}).astype(int)
+Shootout_math = teamtable.Shootout.str.split("-",expand=True).drop([1],axis=1).rename(columns={0:"SOWins"}).astype(int)
+Overtime_math = teamtable.Overtime.str.split("-",expand=True).drop([1],axis=1).rename(columns={0:"OTWins"}).astype(int)
 
-Shootout_math = testteam.Shootout.str.split("-",expand=True).drop([1],axis=1).rename(columns={0:"SOWins"}).astype(int)
-
-Overtime_math = testteam.Overtime.str.split("-",expand=True).drop([1],axis=1).rename(columns={0:"OTWins"}).astype(int)
 #Join math tables
 pts_math = teamname.join(Overall_math)
 pts_math = pts_math.join(Shootout_math)
@@ -64,13 +62,18 @@ pts_math['True_Wins'] = pts_math.Wins - pts_math.OT_W
 pts_math['True_Wins_Pts'] = pts_math.True_Wins*3
 pts_math['OT_W_Pts'] = pts_math.OT_W*2
 pts_math['OT_L_Pts'] = pts_math.OT_L*1
+
 # THE NEW TOTAL POINTS!!
+pts_math['New_Record(Reg W,OT/SO Win, OT/SO Loss, Reg Loss)']= pts_math.True_Wins.astype(str).str.cat([pts_math.OT_W.astype(str),pts_math.OT_L.astype(str),Overall_math.Loss.astype(str)],sep='-')
 pts_math['PTS_Total']= pts_math.True_Wins_Pts+pts_math.OT_W_Pts+pts_math.OT_L_Pts
 
 
 #export .csv file
 pts_math.to_csv('321-Point-Standings.csv',header=True,index=True)
 
+#export .html file
+pts_math.to_html("dataTable.html")
 
 
-print(pts_math)
+
+# print(pts_math)
