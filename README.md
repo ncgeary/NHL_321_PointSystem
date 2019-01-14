@@ -6,4 +6,4 @@ Brief overview of what the 3-2-1 point system is:
 2 points -> Overtime/Shootout win
 1 point -> Overtime/Shootout lose
 
-To make this happen I am using Python and the BeautifulSoup library to web scrape the NHL standings on hockey-reference.com along with some data manipulation to come up with the new standings.
+To make this happen I am using Python, the BeautifulSoup library to web scrape the NHL standings on hockey-reference.com along with some data manipulation and basic math using Numpy and Pandas to come up with the new standings.
