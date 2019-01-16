@@ -1,7 +1,6 @@
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
 from html.parser import HTMLParser
-
 import numpy as np
 import pandas as pd
 
@@ -17,15 +16,11 @@ for caption in soup.find_all('caption'):
 
 #Table data into one large array
 all_teams = []
-with open('NHL_Standings.txt','w') as r:
-    for row in table.find_all('tr'):
-        for cell in row.find_all('td'):
-            all_teams.append(cell.text)
-            # just to throw it into a text file
-            r.write(cell.text)
-            r.write(',')
+#Grab all the data
+for row in table.find_all('tr'):
+    for cell in row.find_all('td'):
+        all_teams.append(cell.text)
 
-        r.write('\n')
 
 #divide the all_teams data into their own arrays
 def teamsplitter(l, n):
@@ -64,16 +59,17 @@ pts_math['OT_W_Pts'] = pts_math.OT_W*2
 pts_math['OT_L_Pts'] = pts_math.OT_L*1
 
 # THE NEW TOTAL POINTS!!
-pts_math['New_Record(Reg W,OT/SO Win, OT/SO Loss, Reg Loss)']= pts_math.True_Wins.astype(str).str.cat([pts_math.OT_W.astype(str),pts_math.OT_L.astype(str),Overall_math.Loss.astype(str)],sep='-')
+pts_math['New_Record(Reg W - OT/SO Win - OT/SO Loss - Reg Loss)']= pts_math.True_Wins.astype(str).str.cat([pts_math.OT_W.astype(str),pts_math.OT_L.astype(str),Overall_math.Loss.astype(str)],sep='-')
 pts_math['PTS_Total']= pts_math.True_Wins_Pts+pts_math.OT_W_Pts+pts_math.OT_L_Pts
+
+pts_math = pts_math.sort_values(by=["PTS_Total"],ascending=False)
 
 
 #export .csv file
-pts_math.to_csv('321-Point-Standings.csv',header=True,index=True)
+pts_math.to_csv('321-Point-Standings.csv',header=True,index=False)
 
 #export .html file
 pts_math.to_html("dataTable.html")
 
 
-
-# print(pts_math)
+print(pts_math)

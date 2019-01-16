@@ -1,1 +1,9 @@
-
+h1{
+  text-align: center;
+}
+#updated_rankings{
+  text-align: center;
+}
+.btn{
+  margin-bottom: 10px;
+}
