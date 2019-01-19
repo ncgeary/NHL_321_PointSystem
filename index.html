@@ -39,9 +39,9 @@
 
        <div class="t_style">
          <!-- <h3>2019 Standings</h3> -->
-           <div id="updated_rankings"/>
+           <div class="collapse multi-collapse" id="updated_rankings"/>
          <!-- <h3>2018 Standings</h3> -->
-           <div id="updated_rankings_2018"/>
+           <div class="collapse multi-collapse" id="updated_rankings_2018"/>
        </div>
 
       </div>
@@ -59,6 +59,18 @@
    });
   }
   // -----------------------------------------------------------------------
+  // $(document).ready(function(){
+  //   $('#load_data_2019').click(function(){
+  //     $.ajax({
+  //        url:"./321-Point-Standings.html",
+  //        type:'GET',
+  //        success: function(data){
+  //            $('#2019_Standings').html($(data).html());
+  //        }
+  //     })
+  //   });
+  // });
+// -----------------------------------------------------------------------
   $(document).ready(function(){
    $('#load_data_2019').click(function(){
     $.ajax({
@@ -91,7 +103,7 @@
      }
     });
    });
-// -----------------------------------------------------------------------
+  // -----------------------------------------------------------------------
    $('#load_data_2018').click(function(){
     $.ajax({
     type: "GET",

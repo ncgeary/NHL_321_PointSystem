@@ -59,17 +59,19 @@ pts_math['OT_W_Pts'] = pts_math.OT_W*2
 pts_math['OT_L_Pts'] = pts_math.OT_L*1
 
 # THE NEW TOTAL POINTS!!
-pts_math['New_Record(Reg W - OT/SO Win - OT/SO Loss - Reg Loss)']= pts_math.True_Wins.astype(str).str.cat([pts_math.OT_W.astype(str),pts_math.OT_L.astype(str),Overall_math.Loss.astype(str)],sep='-')
+pts_math['New Record(True Wins - OT/SO Win - OT/SO Loss - Reg Loss)']= pts_math.True_Wins.astype(str).str.cat([pts_math.OT_W.astype(str),pts_math.OT_L.astype(str),Overall_math.Loss.astype(str)],sep='-')
 pts_math['PTS_Total']= pts_math.True_Wins_Pts+pts_math.OT_W_Pts+pts_math.OT_L_Pts
 
+
+# clean for export
+pts_math.drop(['OT_W','True_Wins_Pts','OT_W_Pts','OT_L_Pts'],axis=1)
+pts_math.rename(columns={"OT_L":"Overtime Loss","SOWins":"Shoot Out Wins","True_Wins":"True Wins"})
 pts_math = pts_math.sort_values(by=["PTS_Total"],ascending=False)
-
-
 #export .csv file
 pts_math.to_csv('321-Point-Standings.csv',header=True,index=False)
 
 #export .html file
-# pts_math.to_html("dataTable.html")
+pts_math.to_html("321-Point-Standings.html",header=True,index=False,table_id="2019_Standings")
 
 
 print("x")
