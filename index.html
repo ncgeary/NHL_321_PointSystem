@@ -3,11 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <meta http-equiv="x-ua-compatible" content="ie=edge"> -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>NHL 3-2-1 Point System</title>
-
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <!-- CSS Style Sheet -->
     <link rel="stylesheet" href="./master.css">
+
   </head>
   <body>
     <h1>NHL 2019 Standings</h1>
@@ -15,9 +17,10 @@
     <div align="center">
      <button
        type="button"
-       name="load_data"
-       id="load_data"
-       class="btn btn-info">Load Data 2019 Standings
+       name="load_data_2019"
+       id="load_data_2019"
+       class="btn btn-info"
+       onclick="runPy_2019()">Load Data 2019 Standings
      </button>
     </div>
 
@@ -34,8 +37,14 @@
 </html>
 
 <script>
+  function runPy_2019(){
+    $.ajax({
+      url: "hockey-ref.py",
+     context: document.body
+   });
+  }
   $(document).ready(function(){
-   $('#load_data').click(function(){
+   $('#load_data_2019').click(function(){
     $.ajax({
     type: "GET",
      url:"./321-Point-Standings.csv",
@@ -66,6 +75,5 @@
      }
     });
    });
-
   });
 </script>

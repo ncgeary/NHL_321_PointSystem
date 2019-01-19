@@ -3,6 +3,9 @@ h1{
 }
 #updated_rankings{
   text-align: center;
+  width: 500px;
+  height: 500px;
+  table-layout: auto;
 }
 .btn{
   margin-bottom: 10px;
