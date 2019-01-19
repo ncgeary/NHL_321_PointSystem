@@ -4,8 +4,8 @@ from html.parser import HTMLParser
 import numpy as np
 import pandas as pd
 
-
-url = 'https://www.hockey-reference.com/leagues/NHL_2018_standings.html'
+# Manually changed the dates just to get tables in inventory... This probablly could have been done automatically, but I am just trying to build out the functionality of the website... Spelling errors
+url = 'https://www.hockey-reference.com/leagues/NHL_2015_standings.html'
 soup = BeautifulSoup(urlopen(url), "html.parser")
 
 
@@ -66,10 +66,10 @@ pts_math = pts_math.sort_values(by=["PTS_Total"],ascending=False)
 
 
 #export .csv file
-pts_math.to_csv('./History/2018_321-Point-Standings.csv',header=True,index=False)
+pts_math.to_csv('./History/2015_321-Point-Standings.csv',header=True,index=False)
 
 #export .html file
-# pts_math.to_html("./History/2018_dataTable.html")
+# pts_math.to_html("./History/2015_dataTable.html")
 
 
 print("x")
