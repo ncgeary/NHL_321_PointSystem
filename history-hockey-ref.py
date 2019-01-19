@@ -5,7 +5,7 @@ import numpy as np
 import pandas as pd
 
 
-url = 'https://www.hockey-reference.com/leagues/NHL_2019_standings.html'
+url = 'https://www.hockey-reference.com/leagues/NHL_2018_standings.html'
 soup = BeautifulSoup(urlopen(url), "html.parser")
 
 
@@ -66,10 +66,10 @@ pts_math = pts_math.sort_values(by=["PTS_Total"],ascending=False)
 
 
 #export .csv file
-pts_math.to_csv('321-Point-Standings.csv',header=True,index=False)
+pts_math.to_csv('./History/2018_321-Point-Standings.csv',header=True,index=False)
 
 #export .html file
-# pts_math.to_html("dataTable.html")
+# pts_math.to_html("./History/2018_dataTable.html")
 
 
 print("x")

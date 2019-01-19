@@ -12,22 +12,60 @@
 
   </head>
   <body>
-    <h1>NHL 2019 Standings</h1>
+    <h1>NHL Standings</h1>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">321 Point System</a>
 
-    <div align="center">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="navbar" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+
+          <a class="nav-item nav-link active" href="#"><span class="sr-only">(current)</span></a>
+
+          <a
+            class="nav-item nav-link"
+            name="load_data_2019"
+            id="load_data_2019"
+            onclick="updatePy_2019()">2019 Standings</a>
+
+          <a
+            class="nav-item nav-link"
+            name="load_data_2018"
+            id="load_data_2018"
+            class="btn btn-info">2018 Standings</a>
+
+        </div>
+      </div>
+    </nav>
+
+    <!-- <div align="center">
      <button
        type="button"
        name="load_data_2019"
        id="load_data_2019"
        class="btn btn-info"
-       onclick="runPy_2019()">Load Data 2019 Standings
+       onclick="updatePy_2019()">Load Data 2019 Standings
      </button>
+    </div> -->
+
+    <!-- <div align="center">
+     <button
+       type="button"
+       name="load_data_2018"
+       id="load_data_2018"
+       class="btn btn-info">Load Data 2018 Standings
+     </button> -->
     </div>
 
-    <div>
-      <div id="updated_rankings" />
+    <div class="t_style">
+      <!-- <h3>2019 Standings</h3> -->
+        <div id="updated_rankings"/>
+      <!-- <h3>2018 Standings</h3> -->
+        <div id="updated_rankings_2018"/>
     </div>
-
 
 
 
@@ -37,12 +75,13 @@
 </html>
 
 <script>
-  function runPy_2019(){
+  function updatePy_2019(){
     $.ajax({
       url: "hockey-ref.py",
      context: document.body
    });
   }
+  // -----------------------------------------------------------------------
   $(document).ready(function(){
    $('#load_data_2019').click(function(){
     $.ajax({
@@ -72,6 +111,38 @@
       }
       table_data += '</table>';
       $('#updated_rankings').html(table_data);
+     }
+    });
+   });
+// -----------------------------------------------------------------------
+   $('#load_data_2018').click(function(){
+    $.ajax({
+    type: "GET",
+     url:"./History/2018_321-Point-Standings.csv",
+     dataType:"text",
+     success:function(data)
+     {
+      var team_data = data.split(/\r?\n|\r/);
+      var table_data = '<table class="table table-bordered table-striped">';
+      for(var count = 0; count<team_data.length; count++)
+      {
+       var cell_data = team_data[count].split(",");
+       table_data += '<tr>';
+       for(var cell_count=0; cell_count<cell_data.length; cell_count++)
+       {
+        if(count === 0)
+        {
+         table_data += '<th>'+cell_data[cell_count]+'</th>';
+        }
+        else
+        {
+         table_data += '<td>'+cell_data[cell_count]+'</td>';
+        }
+       }
+       table_data += '</tr>';
+      }
+      table_data += '</table>';
+      $('#updated_rankings_2018').html(table_data);
      }
     });
    });

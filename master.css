@@ -1,11 +1,8 @@
 h1{
   text-align: center;
 }
-#updated_rankings{
+.t_style{
   text-align: center;
-  width: 500px;
-  height: 500px;
-  table-layout: auto;
 }
 .btn{
   margin-bottom: 10px;
