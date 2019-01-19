@@ -12,62 +12,39 @@
 
   </head>
   <body>
-    <h1>NHL Standings</h1>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">321 Point System</a>
+    <div class="container">
+      <h1>NHL Standings</h1>
 
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
 
-      <div class="navbar" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
+       <button
+         type="button"
+         name="load_data_2019"
+         id="load_data_2019"
+         href="#updated_rankings"
+         class="btn btn-info"
+         data-toggle="collapse"
+         aria-expanded="false"
+         onclick="updatePy_2019()">2019 NHL Standings
+       </button>
 
-          <a class="nav-item nav-link active" href="#"><span class="sr-only">(current)</span></a>
+       <button
+         type="button"
+         name="load_data_2018"
+         id="load_data_2018"
+         href="#updated_rankings_2018"
+         class="btn btn-info"
+         data-toggle="collapse"
+         aria-expanded="false">2018 NHL Standings
+       </button>
 
-          <a
-            class="nav-item nav-link"
-            name="load_data_2019"
-            id="load_data_2019"
-            onclick="updatePy_2019()">2019 Standings</a>
+       <div class="t_style">
+         <!-- <h3>2019 Standings</h3> -->
+           <div id="updated_rankings"/>
+         <!-- <h3>2018 Standings</h3> -->
+           <div id="updated_rankings_2018"/>
+       </div>
 
-          <a
-            class="nav-item nav-link"
-            name="load_data_2018"
-            id="load_data_2018"
-            class="btn btn-info">2018 Standings</a>
-
-        </div>
       </div>
-    </nav>
-
-    <!-- <div align="center">
-     <button
-       type="button"
-       name="load_data_2019"
-       id="load_data_2019"
-       class="btn btn-info"
-       onclick="updatePy_2019()">Load Data 2019 Standings
-     </button>
-    </div> -->
-
-    <!-- <div align="center">
-     <button
-       type="button"
-       name="load_data_2018"
-       id="load_data_2018"
-       class="btn btn-info">Load Data 2018 Standings
-     </button> -->
-    </div>
-
-    <div class="t_style">
-      <!-- <h3>2019 Standings</h3> -->
-        <div id="updated_rankings"/>
-      <!-- <h3>2018 Standings</h3> -->
-        <div id="updated_rankings_2018"/>
-    </div>
-
-
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
