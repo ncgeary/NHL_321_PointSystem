@@ -65,7 +65,7 @@ pts_math['PTS_Total']= pts_math.True_Wins_Pts+pts_math.OT_W_Pts+pts_math.OT_L_Pt
 
 # clean for export
 pts_math.drop(['OT_W','True_Wins_Pts','OT_W_Pts','OT_L_Pts'],axis=1)
-pts_math.rename(columns={"OT_L":"Overtime Loss","SOWins":"Shoot Out Wins","True_Wins":"True Wins"})
+# pts_math.rename(columns={"OT_L":"Overtime Loss","SOWins":"Shoot Out Wins","True_Wins":"True Wins"})
 pts_math = pts_math.sort_values(by=["PTS_Total"],ascending=False)
 #export .csv file
 pts_math.to_csv('321-Point-Standings.csv',header=True,index=False)
