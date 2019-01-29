@@ -5,7 +5,7 @@ import numpy as np
 import pandas as pd
 
 # Manually changed the dates just to get tables in inventory... This probablly could have been done automatically, but I am just trying to build out the functionality of the website... Spelling errors
-url = 'https://www.hockey-reference.com/leagues/NHL_2015_standings.html'
+url = 'https://www.hockey-reference.com/leagues/NHL_2014_standings.html'
 soup = BeautifulSoup(urlopen(url), "html.parser")
 
 
@@ -64,12 +64,18 @@ pts_math['PTS_Total']= pts_math.True_Wins_Pts+pts_math.OT_W_Pts+pts_math.OT_L_Pt
 
 pts_math = pts_math.sort_values(by=["PTS_Total"],ascending=False)
 
+# clean for export
+pts_math = pts_math.drop(['OT_W', 'True_Wins_Pts', 'OT_W_Pts', 'OT_L_Pts'], axis=1)
+pts_math = pts_math.rename(columns={"OT_L":"Overtime Loss","SOWins":"Shoot Out Wins","OTWins":"Overtime Wins","True_Wins":"True Wins","PTS_Total":"Points"})
+pts_math = pts_math.sort_values(by=["Points"],ascending=False)
+
+
 
 #export .csv file
-pts_math.to_csv('./History/2015_321-Point-Standings.csv',header=True,index=False)
+pts_math.to_csv('./History/2014_321-Point-Standings.csv',header=True,index=False)
 
 #export .html file
-# pts_math.to_html("./History/2015_dataTable.html")
+# pts_math.to_html("./History/2014_dataTable.html")
 
 
 print("x")

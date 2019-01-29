@@ -1,31 +1,31 @@
-Team,Wins,Loss,OT_L,SOWins,OTWins,OT_W,True_Wins,True_Wins_Pts,OT_W_Pts,OT_L_Pts,New_Record(Reg W - OT/SO Win - OT/SO Loss - Reg Loss),PTS_Total
-Washington Capitals,56,18,8,4,7,11,45,135,22,8,45-11-8-18,165
-Dallas Stars,50,23,9,2,6,8,42,126,16,9,42-8-9-23,151
-St. Louis Blues,49,24,9,5,8,13,36,108,26,9,36-13-9-24,143
-Pittsburgh Penguins,48,26,8,4,6,10,38,114,20,8,38-10-8-26,142
-Florida Panthers,47,26,9,7,1,8,39,117,16,9,39-8-9-26,142
-Anaheim Ducks,46,25,11,3,4,7,39,117,14,11,39-7-11-25,142
-New York Rangers,46,27,9,3,4,7,39,117,14,9,39-7-9-27,140
-Chicago Blackhawks,47,26,9,1,10,11,36,108,22,9,36-11-9-26,139
-Los Angeles Kings,48,28,6,2,12,14,34,102,28,6,34-14-6-28,136
-San Jose Sharks,46,30,6,4,5,9,37,111,18,6,37-9-6-30,135
-New York Islanders,45,27,10,5,6,11,34,102,22,10,34-11-10-27,134
-Tampa Bay Lightning,46,31,5,3,7,10,36,108,20,5,36-10-5-31,133
-Nashville Predators,41,27,14,4,2,6,35,105,12,14,35-6-14-27,131
-Boston Bruins,42,31,9,4,5,9,33,99,18,9,33-9-9-31,126
-Philadelphia Flyers,41,27,14,3,10,13,28,84,26,14,28-13-14-27,124
-Detroit Red Wings,41,30,11,2,9,11,30,90,22,11,30-11-11-30,123
-Minnesota Wild,38,33,11,3,1,4,34,102,8,11,34-4-11-33,121
-Colorado Avalanche,39,39,4,4,2,6,33,99,12,4,33-6-4-39,115
-Montreal Canadiens,38,38,6,5,3,8,30,90,16,6,30-8-6-38,112
-Carolina Hurricanes,35,31,16,2,8,10,25,75,20,16,25-10-16-31,111
-Ottawa Senators,38,35,9,6,6,12,26,78,24,9,26-12-9-35,111
-New Jersey Devils,38,36,8,2,9,11,27,81,22,8,27-11-8-36,111
-Buffalo Sabres,35,36,11,2,4,6,29,87,12,11,29-6-11-36,110
-Arizona Coyotes,35,39,8,1,5,6,29,87,12,8,29-6-8-39,107
-Winnipeg Jets,35,39,8,3,3,6,29,87,12,8,29-6-8-39,107
-Columbus Blue Jackets,34,40,8,6,2,8,26,78,16,8,26-8-8-40,102
-Calgary Flames,35,40,7,2,9,11,24,72,22,7,24-11-7-40,101
-Vancouver Canucks,31,38,13,5,4,9,22,66,18,13,22-9-13-38,97
-Edmonton Oilers,31,43,8,4,7,11,20,60,22,8,20-11-8-43,90
-Toronto Maple Leafs,29,42,11,6,3,9,20,60,18,11,20-9-11-42,89
+Team,Wins,Loss,Overtime Loss,Shoot Out Wins,Overtime Wins,True Wins,New_Record(Reg W - OT/SO Win - OT/SO Loss - Reg Loss),Points
+Washington Capitals,56,18,8,4,7,45,45-11-8-18,165
+Dallas Stars,50,23,9,2,6,42,42-8-9-23,151
+St. Louis Blues,49,24,9,5,8,36,36-13-9-24,143
+Pittsburgh Penguins,48,26,8,4,6,38,38-10-8-26,142
+Florida Panthers,47,26,9,7,1,39,39-8-9-26,142
+Anaheim Ducks,46,25,11,3,4,39,39-7-11-25,142
+New York Rangers,46,27,9,3,4,39,39-7-9-27,140
+Chicago Blackhawks,47,26,9,1,10,36,36-11-9-26,139
+Los Angeles Kings,48,28,6,2,12,34,34-14-6-28,136
+San Jose Sharks,46,30,6,4,5,37,37-9-6-30,135
+New York Islanders,45,27,10,5,6,34,34-11-10-27,134
+Tampa Bay Lightning,46,31,5,3,7,36,36-10-5-31,133
+Nashville Predators,41,27,14,4,2,35,35-6-14-27,131
+Boston Bruins,42,31,9,4,5,33,33-9-9-31,126
+Philadelphia Flyers,41,27,14,3,10,28,28-13-14-27,124
+Detroit Red Wings,41,30,11,2,9,30,30-11-11-30,123
+Minnesota Wild,38,33,11,3,1,34,34-4-11-33,121
+Colorado Avalanche,39,39,4,4,2,33,33-6-4-39,115
+Montreal Canadiens,38,38,6,5,3,30,30-8-6-38,112
+Carolina Hurricanes,35,31,16,2,8,25,25-10-16-31,111
+Ottawa Senators,38,35,9,6,6,26,26-12-9-35,111
+New Jersey Devils,38,36,8,2,9,27,27-11-8-36,111
+Buffalo Sabres,35,36,11,2,4,29,29-6-11-36,110
+Arizona Coyotes,35,39,8,1,5,29,29-6-8-39,107
+Winnipeg Jets,35,39,8,3,3,29,29-6-8-39,107
+Columbus Blue Jackets,34,40,8,6,2,26,26-8-8-40,102
+Calgary Flames,35,40,7,2,9,24,24-11-7-40,101
+Vancouver Canucks,31,38,13,5,4,22,22-9-13-38,97
+Edmonton Oilers,31,43,8,4,7,20,20-11-8-43,90
+Toronto Maple Leafs,29,42,11,6,3,20,20-9-11-42,89
