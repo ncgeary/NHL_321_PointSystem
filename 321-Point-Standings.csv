@@ -1,32 +1,32 @@
-Team,Wins,Loss,Overtime Loss,Shoot Out Wins,Overtime Wins,True Wins,New Record,Points
-Tampa Bay Lightning,58,14,4,6,7,45,45-13-4-14,165
-Calgary Flames,47,21,7,0,5,42,42-5-7-21,143
-Boston Bruins,46,20,9,2,9,35,35-11-9-20,136
-Toronto Maple Leafs,44,25,6,0,6,38,38-6-6-25,132
-San Jose Sharks,43,23,9,0,7,36,36-7-9-23,131
-Winnipeg Jets,45,26,4,2,6,37,37-8-4-26,131
-Washington Capitals,43,24,8,4,5,34,34-9-8-24,128
-Pittsburgh Penguins,41,24,11,2,5,34,34-7-11-24,127
-New York Islanders,43,25,7,4,6,33,33-10-7-25,126
-Vegas Golden Knights,42,27,6,3,4,35,35-7-6-27,125
-Carolina Hurricanes,41,26,7,2,4,35,35-6-7-26,124
-Nashville Predators,42,28,6,4,5,33,33-9-6-28,123
-St. Louis Blues,40,27,8,1,5,34,34-6-8-27,122
-Montreal Canadiens,40,28,7,2,4,34,34-6-7-28,121
-Columbus Blue Jackets,40,30,4,1,8,31,31-9-4-30,115
-Dallas Stars,38,31,6,0,6,32,32-6-6-31,114
-Colorado Avalanche,34,29,12,1,2,31,31-3-12-29,111
-Minnesota Wild,35,32,9,1,3,31,31-4-9-32,110
-Philadelphia Flyers,36,31,8,2,6,28,28-8-8-31,108
-Arizona Coyotes,36,32,7,4,5,27,27-9-7-32,106
-Florida Panthers,33,30,12,3,7,23,23-10-12-30,101
-Edmonton Oilers,33,34,8,3,8,22,22-11-8-34,96
-Chicago Blackhawks,32,32,10,2,8,22,22-10-10-32,96
-Vancouver Canucks,32,33,10,4,7,21,21-11-10-33,95
-Anaheim Ducks,31,36,10,3,5,23,23-8-10-36,95
-New York Rangers,29,32,13,6,2,21,21-8-13-32,92
-Buffalo Sabres,31,34,9,5,7,19,19-12-9-34,90
-New Jersey Devils,28,39,9,3,3,22,22-6-9-39,87
-Los Angeles Kings,27,39,8,3,5,19,19-8-8-39,81
-Detroit Red Wings,27,38,10,3,8,16,16-11-10-38,80
-Ottawa Senators,26,43,6,0,6,20,20-6-6-43,78
+Team,Wins,Loss,Overtime_Loss,Shoot_Out_Wins,Overtime_Wins,True_Wins,New_Record,Points,Current_Points,Current_Rank,New_Rank
+Tampa Bay Lightning,58,14,4,6,7,45,45-13-4-14,165,120,1.0,1.0
+Calgary Flames,47,21,7,0,5,42,42-5-7-21,143,101,2.5,2.0
+Boston Bruins,46,20,9,2,9,35,35-11-9-20,136,101,2.5,3.0
+Toronto Maple Leafs,44,25,6,0,6,38,38-6-6-25,132,94,7.5,4.0
+Washington Capitals,44,24,8,4,5,35,35-9-8-24,131,96,4.0,6.0
+San Jose Sharks,43,23,9,0,7,36,36-7-9-23,131,95,5.5,6.0
+Winnipeg Jets,45,26,4,2,6,37,37-8-4-26,131,94,7.5,6.0
+New York Islanders,44,25,7,4,6,34,34-10-7-25,129,95,5.5,8.0
+Pittsburgh Penguins,41,24,11,2,5,34,34-7-11-24,127,93,9.0,9.0
+Carolina Hurricanes,42,26,7,2,5,35,35-7-7-26,126,91,10.0,10.0
+Vegas Golden Knights,42,27,6,3,4,35,35-7-6-27,125,90,11.5,11.0
+Nashville Predators,42,28,6,4,5,33,33-9-6-28,123,90,11.5,12.0
+Montreal Canadiens,40,28,8,2,4,34,34-6-8-28,122,88,13.5,13.5
+St. Louis Blues,40,27,8,1,5,34,34-6-8-27,122,88,13.5,13.5
+Columbus Blue Jackets,41,30,4,1,8,32,32-9-4-30,118,86,15.0,15.0
+Dallas Stars,38,31,6,0,6,32,32-6-6-31,114,82,16.0,16.0
+Colorado Avalanche,34,29,13,1,2,31,31-3-13-29,112,81,17.0,17.0
+Minnesota Wild,35,32,9,1,3,31,31-4-9-32,110,79,19.5,18.0
+Philadelphia Flyers,36,32,8,2,6,28,28-8-8-32,108,80,18.0,19.0
+Arizona Coyotes,36,33,7,4,5,27,27-9-7-33,106,79,19.5,20.0
+Florida Panthers,33,30,12,3,7,23,23-10-12-30,101,78,21.0,21.0
+Chicago Blackhawks,33,32,10,2,9,22,22-11-10-32,98,76,22.0,22.0
+Edmonton Oilers,33,34,8,3,8,22,22-11-8-34,96,74,23.5,23.0
+Vancouver Canucks,32,34,10,4,7,21,21-11-10-34,95,74,23.5,24.5
+Anaheim Ducks,31,36,10,3,5,23,23-8-10-36,95,72,25.0,24.5
+New York Rangers,29,32,13,6,2,21,21-8-13-32,92,71,26.5,26.0
+Buffalo Sabres,31,34,9,5,7,19,19-12-9-34,90,71,26.5,27.0
+New Jersey Devils,28,39,9,3,3,22,22-6-9-39,87,65,28.0,28.0
+Los Angeles Kings,27,39,8,3,5,19,19-8-8-39,81,62,30.0,29.0
+Detroit Red Wings,27,38,10,3,8,16,16-11-10-38,80,64,29.0,30.0
+Ottawa Senators,26,43,6,0,6,20,20-6-6-43,78,58,31.0,31.0
