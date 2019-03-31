@@ -33,8 +33,7 @@
          href="#updated_rankings"
          class="btn btn-info"
          data-toggle="collapse"
-         aria-expanded="false"
-         onclick="updatePy_2019()">Load 2019 NHL Standings
+         aria-expanded="false">Load 2019 NHL Standings
        </button>
 
 
@@ -115,38 +114,6 @@ project here: <a href="https://github.com/ncgeary/NHL_321_Point_System_Ver2" cla
       }
       table_data += '</table>';
       $('#updated_rankings').html(table_data);
-     }
-    });
-   });
-  // -----------------------------------------------------------------------
-   $('#load_data_2018').click(function(){
-    $.ajax({
-    type: "GET",
-     url:"./History/2018_321-Point-Standings.csv",
-     dataType:"text",
-     success:function(data)
-     {
-      var team_data = data.split(/\r?\n|\r/);
-      var table_data = '<table class="table table-bordered table-striped">';
-      for(var count = 0; count<team_data.length; count++)
-      {
-       var cell_data = team_data[count].split(",");
-       table_data += '<tr>';
-       for(var cell_count=0; cell_count<cell_data.length; cell_count++)
-       {
-        if(count === 0)
-        {
-         table_data += '<th>'+cell_data[cell_count]+'</th>';
-        }
-        else
-        {
-         table_data += '<td>'+cell_data[cell_count]+'</td>';
-        }
-       }
-       table_data += '</tr>';
-      }
-      table_data += '</table>';
-      $('#updated_rankings_2018').html(table_data);
      }
     });
    });
